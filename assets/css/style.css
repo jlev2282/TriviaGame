@@ -1,0 +1,46 @@
+div {
+	color: red;
+}
+.startpage {
+	background-image: url('../images/timebkgrnd.jpg');
+}
+
+div.row {
+	text-align: center;
+	border: solid;
+	border-radius: 5px;
+	border-color: black;
+}
+
+.banner {
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+	color: red;
+	border: solid;
+	border-color: red;
+	border-radius: 5px;
+}
+
+.choices {
+	width: 100%;
+	border: solid;
+	border-color: red;
+	border-radius: 5px;
+}
+
+#billted {
+	background-image: url('../images/billandtedcover.jpg');
+}
+
+#backfut {
+	background-image: url('../images/backtothefuturecover.jpg');
+}
+
+#docwho {
+	background-image: url('../images/docwhodocs.jpg');
+}
+
+.cats {
+	background-size: cover;
+	height: 300px;
+}
