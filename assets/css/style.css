@@ -64,3 +64,8 @@ div.row {
 	text-align: center;
 	border: solid;
 }
+
+#mainstage {
+	height: 400px;
+	background-color: white;
+}

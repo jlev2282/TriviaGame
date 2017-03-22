@@ -3,12 +3,16 @@
 <head>
 	<title>Time Machine Trivia</title>
 
-
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 		  <!-- Added link to the jQuery Library -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!--<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>-->
 
   <!-- Added a link to Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -28,12 +32,35 @@
 			<div class="col-md-12">Choose a category below to begin</div>
 		</div>
 		<div class="row">
-				<div class="col-md-4 cats" id="billted" value="1"><a href="stage.html"><button>Bill and Ted's Excellent Adventure</button></a></div>
-				<div class="col-md-4 cats" id="backfut" value="2"><button>Back to the Future</button></div>
-				<div class="col-md-4 cats" id="docwho" value="3"><button>Dr. Who</button></div>
+				<div class="col-md-4 cats" id="billted" value="1"><button id="deck1">Bill and Ted's Excellent Adventure</button></div>
+				<div class="col-md-4 cats" id="backfut" value="2"><button id="deck2">Back to the Future</button></div>
+				<div class="col-md-4 cats" id="docwho" value="3"><button id="deck3">Dr. Who</button></div>
 		</div>
 		</div>
 		</div>
+	</div>
+
+	<div id="gamestage">
+		<h1 id="stagebanner">Category Name</h1>
+	<div class="container">
+		<div class="row" id="showinfo">
+			<div class="col-md-1"></div>
+			<div class="col-md-4" ><img id="showpic" src="assets/images/timepanel.jpg"></div>
+			<div class="col-md-6" id="showbio"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, neque nec lacinia volutpat, dolor libero porta massa, sed fermentum risus purus eget diam. Aenean luctus elit enim, et dapibus dui faucibus sed. Suspendisse sagittis dignissim orci vitae sagittis. Praesent eu ultricies sem. Morbi aliquet, arcu id pellentesque tempor, purus odio commodo erat, blandit scelerisque justo felis ut felis.</p>
+			<p> Phasellus sed consectetur massa, at placerat elit. Maecenas in viverra dolor, ultrices interdum enim. Donec at viverra est. Maecenas quis risus sapien. Mauris vel malesuada nisi. Fusce accumsan augue non tortor semper tristique. Phasellus vel ultricies erat, in scelerisque orci.</p></div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 stagemenu">score</div>
+			<div class="col-md-4 stagemenu"><button>Ready?</button></div>
+			<div class="col-md-4 stagemenu">timer</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="mainstage">questions</div>
+		</div>
+		<div>new round?</div>
+		<div><button><a href="index.html">main menu</a></button></div>
+	</div>
 	</div>
 </body>
 </html>
