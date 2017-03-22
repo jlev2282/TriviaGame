@@ -2,15 +2,39 @@
 <html>
 <head>
 	<title>The Stage</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
 </head>
 <body>
-	<h1>Category Name</h1>
-	<div>Info on movie</div>
-	<div>score</div>
-	<div>timer</div>
-	<div>questions</div>
-	<div>new round</div>
-	<div><button><a href="index.html">main menu</a></button></div>
-
+	<h1 id="stagebanner">Category Name</h1>
+	<div class="container">
+		<div class="row" id="showinfo">
+			<div class="col-md-1"></div>
+			<div class="col-md-4" ><img id="showpic" src="assets/images/timepanel.jpg"></div>
+			<div class="col-md-6" id="showbio"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce finibus, neque nec lacinia volutpat, dolor libero porta massa, sed fermentum risus purus eget diam. Aenean luctus elit enim, et dapibus dui faucibus sed. Suspendisse sagittis dignissim orci vitae sagittis. Praesent eu ultricies sem. Morbi aliquet, arcu id pellentesque tempor, purus odio commodo erat, blandit scelerisque justo felis ut felis.</p>
+			<p> Phasellus sed consectetur massa, at placerat elit. Maecenas in viverra dolor, ultrices interdum enim. Donec at viverra est. Maecenas quis risus sapien. Mauris vel malesuada nisi. Fusce accumsan augue non tortor semper tristique. Phasellus vel ultricies erat, in scelerisque orci.</p></div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 stagemenu">score</div>
+			<div class="col-md-4 stagemenu"><button>Ready?</button></div>
+			<div class="col-md-4 stagemenu">timer</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8" id="mainstage">questions</div>
+		</div>
+		<div>new round?</div>
+		<div><button><a href="index.html">main menu</a></button></div>
+	</div>
 </body>
 </html>

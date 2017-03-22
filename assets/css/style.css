@@ -44,3 +44,23 @@ div.row {
 	background-size: cover;
 	height: 300px;
 }
+
+#stagebanner {
+	width: 100%;
+	text-align: center;
+}
+
+#showinfo {
+	width: 100%;
+	height: 260px;
+}
+
+#showpic {
+	height: 250px;
+	width: auto;
+}
+
+.stagemenu {
+	text-align: center;
+	border: solid;
+}
