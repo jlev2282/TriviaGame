@@ -53,6 +53,12 @@ div.row {
 #showinfo {
 	width: 100%;
 	height: 260px;
+	border-color: red;
+	background: black;
+}
+
+#showbio {
+	padding-top: 20px;
 }
 
 #showpic {
@@ -63,9 +69,24 @@ div.row {
 .stagemenu {
 	text-align: center;
 	border: solid;
+	height: 45px;
 }
 
 #mainstage {
 	height: 400px;
 	background-color: white;
+	visibility: hidden;
+}
+
+.scoretime {
+	background-color: white;
+	width: 50px;
+}
+
+#scorebox {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
 }

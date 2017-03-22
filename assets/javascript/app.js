@@ -1,11 +1,12 @@
 $(document).ready(function() {
 var timer = 30;
 var currentdeck =[];
+var currentform = [];
 var gameDeck = [
 	{
 		category:"Bill and Ted's Excellent Adventure!",
-		backImage: "url('../images/billandted1.jpg')",
-		biopic: "../images/billandtedbethoveen.jpg",
+		backImage: "url('assets/images/billandted1.jpg')",
+		biopic: "assets/images/billandtedbethoveen.jpg",
 		bio: "Bill (Alex Winter) and Ted (Keanu Reeves) are high school buddies starting a band. However, they are about to fail their history class, which means Ted would be sent to military school. They receive help from Rufus (George Carlin), a traveler from a future where their band is the foundation for a perfect society. With the use of Rufus' time machine, Bill and Ted travel to various points in history, returning with important figures to help them complete their final history presentation.",
 		form: billTedqs
 	},
@@ -31,37 +32,34 @@ var gameDeck = [
 //Code for the form arrays holding questions and answers//
  var billTedqs=[	
 	{
-		q1: "1.	Who lead the exercise class at the San Dimas Mall?",
-		answers: [ "Napoleon","Joan of Arc","Ted","Sigmund Freud"
-		],
+		q: "1.	Who lead the exercise class at the San Dimas Mall?",
+		answers: [ "Napoleon","Joan of Arc","Ted","Sigmund Freud"],
 		answer: "Joan of Arc"
 	},
 	{
-		q2: "2.	Who was NOT a historical figure portrayed in the movie?",
-		answers: [ "Billy the Kid", "Abraham Lincoln", "Beethoven", "George Washington"
-		],
+		q: "2.	Who was NOT a historical figure portrayed in the movie?",
+		answers: [ "Billy the Kid", "Abraham Lincoln", "Beethoven", "George Washington"],
 		answer: "George Washington"
 	},
 	{
-		q3: "3.	What number did both Bills and both Teds say when proving their identity to themselves?",
-		answers: [ "00", "19", "69", "3.14"
-		],
-		answer: 69
+		q: "3.	What number did both Bills and both Teds say when proving their identity to themselves?",
+		answers: [ "00", "19", "69", "3.14"],
+		answer: "69"
 	},
 	{
-		q4: "4.	What do Bill and Ted offer Genghis Khan to lure him into the photo booth?",
+		q: "4.	What do Bill and Ted offer Genghis Khan to lure him into the photo booth?",
 		answers: [ "Ho Ho", "Twinkie", "Snickers", "Tootsie Pop"
 		],
 		answer: "Twinkie"
 	},
 	{
-		q5: "5.	What is the name of the waterpark that Napoleon visits during his day in San Dimas?",
+		q: "5.	What is the name of the waterpark that Napoleon visits during his day in San Dimas?",
 		answers: [ "Wet World", "Slip and Slide", "Wild Water", "Waterloo"
 		],
-		anwer: "Waterloo"
+		answer: "Waterloo"
 	},
 	{
-		q6: "6.	What do Bill and Ted order at the saloon where they meet Billy the Kid?",
+		q: "6.	What do Bill and Ted order at the saloon where they meet Billy the Kid?",
 		answers: [ "Whiskey", "Beer", "Pretzels", "Twinkies"
 		],
 		answer: "Beer"
@@ -71,14 +69,24 @@ var gameDeck = [
 	//Code for grabbing the chosen deck and assigning it to stage elements//
 
 	$('#deck1').on('click', function() {
-		currentdeck=gameDeck;
+		currentdeck=gameDeck[0];
+		currentform=billTedqs;
 		console.log(currentdeck)
-		$('#stagebanner').html(currentdeck[0].category);
-		$('#startpage').css("background-image", currentdeck[0].backImage);
-		$('#showpic').attr('src',currentdeck[0].biopic);
-		$('#showbio').html(currentdeck[0].bio);
-		$('#mainstage').html(billTedqs);
+		$('#stagebanner').html(currentdeck.category);
+		$('.startpage').css("background-image", currentdeck.backImage);
+		$('#showpic').attr('src',currentdeck.biopic);
+		$('#showbio').html(currentdeck.bio);
 
 		});
+	$('#startgame').on('click', function () {
+		$('#mainstage').css("visibility", "visible");
+		$('#question1').html(currentform[0].q);
+		$('#ans1').attr('aria-label',currentform[0].answers[0]);
+		$('#question2').html(currentform[1].q);
+		$('#question3').html(currentform[2].q);
+		$('#question4').html(currentform[3].q);
+		$('#question5').html(currentform[4].q);
+		$('#question6').html(currentform[5].q);
+	})
 
 });
